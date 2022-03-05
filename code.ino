@@ -13,7 +13,7 @@ unsigned long lastTime = 0;
 unsigned long timerDelay = 30000;
 //const int current = D2;
 // Variable to hold temperature readings
-int analogInput = 0;
+int analogInput = 0; //Pin 0
 float vout = 0.0;
 float vin = 0.0;
 int value = 0;
@@ -54,7 +54,7 @@ void loop() {
     Serial.println(vin);
     //Serial.println("v");
 
-    float amp = analogRead(2);
+    float amp = analogRead(2); //Pin 2
     amp = amp - 510;
     amp = (amp * 5.0) / 1024.0;
     amp = amp * 10;
